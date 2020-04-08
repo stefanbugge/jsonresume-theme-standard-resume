@@ -2,23 +2,28 @@
 <html>
 	<head>
 	
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
-	
-	<title>{{#resume.basics}}{{name}}{{/resume.basics}}</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+		
+		<title>{{#resume.basics}}{{name}}{{/resume.basics}}</title>
 
-	<style>
-	{{{css}}}
-	</style>
-	
+		<style>
+		{{{css}}}
+		</style>
+		
+		<script src="https://kit.fontawesome.com/6b34f1f9a6.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
-	
-	<div id="resume">
-		{{> basics }}
-		{{> work }}
-		{{> education }}
-		{{> projects }}
-		{{> contact }}
+
+		<div id="resume">
+			{{> basics }}
+			{{> profiles }}
+			{{> work }}
+			{{> education }}
+			{{> projects }}
+			{{> languages }}
+			{{> contact }}
+		</div>
+
 	</body>
 </html>

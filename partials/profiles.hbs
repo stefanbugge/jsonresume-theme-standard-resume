@@ -1,0 +1,15 @@
+{{#if resume.basics.profiles.length}}
+<section>
+	<h2>Profiles</h2>
+
+    <div class="profiles">
+    {{#each resume.basics.profiles}}
+        <a {{#if url}}href="{{url}}" target="_blank" rel="noopener"{{/if}} class="tag" title="{{network}}">
+            <i class="fab fa-{{normalizeNetworkName network}}"></i>
+            <span>{{username}}</span>
+        </a>
+    {{/each}}
+    </div>
+
+</section>
+{{/if}}

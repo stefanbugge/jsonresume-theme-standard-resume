@@ -133,43 +133,58 @@ textarea {
     'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
+:root {
+  --page-max-width: 600px;
+  --main-bg-color: #fafafa;
+  --main-txt-color: #333;
+
+  --heading-color--muted: #c5c9d5;
+  --txt-color--muted: #888;
+
+  --link-color: 255, 215, 221;
+
+  --tag-bg: #edeff5;
+  --tag-bg--hover: rgb(255, 215, 221);
+}
+
 body {
   margin: 0 auto;
   padding: 4rem 2rem 8rem 2rem;
-  max-width: 600px;
-  color: #333333;
+  max-width: var(--page-max-width);
+  color: var(--main-txt-color);
+  background-color: var(--main-bg-color);
 }
 
 h1 {
-  font-size: 30px;
-  font-weight: 600;
+  font-size: 1.875rem;
+  font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 2rem;
 }
 
 h2 {
   margin-top: 4rem;
-  font-size: 12px;
-  font-weight: 600;
-  color: #c9cccf;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--heading-color--muted);
   text-transform: uppercase;
   letter-spacing: 1.2px;
 }
 
 p {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.3125rem;
 }
 
 a {
-  transition: box-shadow 160ms ease 0s;
-  box-shadow: rgb(238, 251, 255) 0px -9px 0px inset;
-  border-bottom: 2px solid rgb(207, 243, 255);
+  transition: all 160ms ease 0s;
+  box-shadow: rgba(var(--link-color), 0.3) 0px -9px 0px inset;
+  border-bottom: 2px solid rgb(var(--link-color));
   text-decoration: none;
   color: #323336;
 }
 
 a:hover {
-  box-shadow: rgb(207, 243, 255) 0px -1.2em 0px inset;
+  box-shadow: rgb(var(--link-color)) 0px -1.2em 0px inset;
 }
 
 section ul {
@@ -182,8 +197,8 @@ section li {
   margin-bottom: 0.5rem;
 }
 
-.grey {
-  color: #96999b;
+.text-muted {
+  color: var(--txt-color--muted);
 }
 
 .contact {
@@ -199,22 +214,39 @@ section li {
   display: block;
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1.125rem;
   letter-spacing: 1.2px;
   padding-top: 2rem;
   padding-bottom: 0.5rem;
 }
 
-.skills ul {
+.profiles {
   display: flex;
   flex-wrap: wrap;
   margin-top: 2rem;
 }
 
-.skills li {
-  margin-bottom: 1rem;
-  margin-right: 0.5rem;
+.tag {
+  display: inline-block;
   padding: 0.25rem 1rem;
-  background-color: #f1f5f7;
+  background-color: var(--tag-bg);
+  margin: 0 0.5rem 0.5rem 0;
   white-space: nowrap;
+}
+
+a.tag {
+  box-shadow: none;
+  border-bottom: none;
+  text-decoration: none;
+}
+
+a.tag:hover {
+  background-color: var(--tag-bg--hover);
+}
+
+.languages {
+  padding-top: 2rem;
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(33.333%, 1fr));
 }
