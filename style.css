@@ -171,6 +171,13 @@ h2 {
   letter-spacing: 1.2px;
 }
 
+h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
 p {
   margin-bottom: 0.3125rem;
 }
@@ -249,4 +256,17 @@ a.tag:hover {
   display: grid;
   grid-gap: 0.5rem;
   grid-template-columns: repeat(auto-fill, minmax(33.333%, 1fr));
+}
+
+.skills {
+  padding-top: 1rem;
+}
+
+.skill__keywords {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill__level {
+  font-weight: normal;
 }
