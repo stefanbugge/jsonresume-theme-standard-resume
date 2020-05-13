@@ -144,7 +144,7 @@ textarea {
   --link-color: 255, 215, 221;
 
   --tag-bg: #edeff5;
-  --tag-bg--hover: rgb(255, 215, 221);
+  --tag-bg--hover: rgb(var(--link-color));
 }
 
 body {

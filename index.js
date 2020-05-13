@@ -9,6 +9,12 @@ function normalizeNetworkName (network) {
 
 function render(resume) {
   var css = fs.readFileSync(__dirname + '/style.css', 'utf-8');
+  var cssOverrides = ''
+  try {
+    cssOverrides = fs.readFileSync(process.cwd() + '/overrides.css', 'utf-8');
+  } catch (e) {
+    //
+  }
   var tpl = fs.readFileSync(__dirname + '/resume.hbs', 'utf-8');
   var partialsDir = path.join(__dirname, 'partials');
   var filenames = fs.readdirSync(partialsDir);
@@ -28,7 +34,7 @@ function render(resume) {
   });
 
   return Handlebars.compile(tpl)({
-    css: css,
+    css: css + '\n\n' + cssOverrides,
     resume: resume,
   });
 }
