@@ -1,6 +1,6 @@
 {
   "name": "jsonresume-theme-standard-resume",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JSON Resume Theme based on Standard Resume",
   "author": "Original by Ema Suriano, changed by Stefan Loeschcke",
   "scripts": {
