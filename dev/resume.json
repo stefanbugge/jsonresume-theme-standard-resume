@@ -67,6 +67,18 @@
       "endDate": "2014-01-01",
       "gpa": "4.0",
       "courses": ["DB1101 - Basic SQL", "CS2011 - Java Introduction"]
+    },
+    {
+      "institution": "Harvard Online Course",
+      "url": "https://cs50.harvard.edu/web/2018/",
+      "area": "Information Technology",
+      "studyType": "Online courses",
+      "startDate": "2020-03-01",
+      "omitEndDate": true,
+      "courses": [
+        "CS50's Introduction to Computer Science",
+        "CS50's Web Programming with Python and JavaScript"
+      ]
     }
   ],
   "awards": [
