@@ -20,6 +20,6 @@
   "devDependencies": {
     "btoa": "^1.2.1",
     "puppeteer": "^2.0.0",
-    "resume-cli": "^1.2.7"
+    "resume-cli": "^2.0.0"
   }
 }
